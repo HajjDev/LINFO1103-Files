@@ -56,8 +56,3 @@ class List:
         if self.is_empty():
             return '[]'
         return '['+ str(self.head()) + str(self.tail()) +']'
-
-l = List()
-l = l.concat(1)
-l = l.concat(2)
-print(l.tail())
