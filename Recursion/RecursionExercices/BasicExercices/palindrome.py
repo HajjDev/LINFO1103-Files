@@ -9,7 +9,7 @@ def is_palindrome(s):
     for i in range(len(s)):
         if s[i] != reversed_s[i]:
             return False
-    
+
     return True
 
 #Exemple de test:
