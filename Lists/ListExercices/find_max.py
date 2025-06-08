@@ -1,3 +1,5 @@
+from List import List
+
 def find_max(l):
     """
     pre: `l` est une `List` non vide contenant des éléments comparables

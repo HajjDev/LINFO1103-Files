@@ -1,3 +1,5 @@
+from List import List
+
 def sum_list(l):
     """
     pre: `l` est une `List` contenant des nombres

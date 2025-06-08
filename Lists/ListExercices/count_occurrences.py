@@ -1,3 +1,5 @@
+from List import List
+
 def count_occurrences(l, e):
     """
     pre: `l` est une `List`

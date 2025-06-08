@@ -1,3 +1,5 @@
+from List import List
+
 def last_k_occurrences(l, e, k):
     """
     pre: `l` est une `List`

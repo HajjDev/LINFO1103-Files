@@ -1,3 +1,5 @@
+from List import List
+
 def keep_only(l, e):
     """
     pre: `l` est une `List`

@@ -1,3 +1,5 @@
+from List import List
+
 def reverse_list(l):
     """
     pre: `l` est une `List`

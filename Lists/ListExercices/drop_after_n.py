@@ -1,3 +1,5 @@
+from List import List
+
 def drop_after_n(l, n):
     """
     pre: `l` est une `List`

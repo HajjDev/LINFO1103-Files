@@ -1,3 +1,5 @@
+from List import List
+
 def map_list(l, f):
     """
     pre: `l` est une `List`

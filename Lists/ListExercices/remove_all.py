@@ -1,3 +1,5 @@
+from List import List
+
 def remove_all(l, e):
     """
     pre: `l` est une `List`

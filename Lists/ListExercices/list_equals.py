@@ -1,3 +1,5 @@
+from List import List
+
 def list_equals(l1, l2):
     """
     pre: `l1` et `l2` sont des List

@@ -1,3 +1,5 @@
+from List import List
+
 def remove_nth(l, n):
     """
     pre: `l` est une `List`

@@ -6,12 +6,10 @@ def linear_sort(array):
     for j in range(min_element, max_element + 1):
         placement[j - min_element] = min_element - 1
     
-    print(placement)
     for i in range(len(array)):
         key = array[i]
         placement[key - min_element] = key
     
-    print(placement)
     i = 0
     for j in range(min_element, max_element + 1):
         if placement[j - min_element] >= min_element:

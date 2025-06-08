@@ -1,3 +1,5 @@
+from List import List
+
 def count_if(l, predicate):
     """
     pre: `l` est une `List`

@@ -1,3 +1,5 @@
+from List import List
+
 def filter_list(l, predicate):
     """
     pre: `l` est une `List`

@@ -1,3 +1,5 @@
+from List import List
+
 def find_in_list(l, e, k):
     """
     pre: `l` est une `List`

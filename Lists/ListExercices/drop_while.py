@@ -1,3 +1,5 @@
+from List import List
+
 def drop_while(l, predicate):
     """
     pre: `l` est une `List`

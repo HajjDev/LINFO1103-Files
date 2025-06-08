@@ -1,3 +1,5 @@
+from List import List
+
 def contains(l, e):
     """
     pre: `l` est une `List`

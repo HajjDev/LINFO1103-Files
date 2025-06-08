@@ -1,3 +1,5 @@
+from List import List
+
 def replace_nth(l, n, e):
     """
     pre: `l` est une `List`

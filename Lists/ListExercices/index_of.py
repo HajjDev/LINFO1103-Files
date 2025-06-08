@@ -1,3 +1,5 @@
+from List import List
+
 def index_of(l, e):
     """
     pre: `l` est une `List`
