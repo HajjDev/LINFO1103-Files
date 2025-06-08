@@ -8,9 +8,26 @@ def last_k_occurrences(l, e, k):
     post: retourne la sous-liste commençant à la position de la (k-ième en partant de la fin) occurrence de `e`.
           Si `e` apparaît moins de `k` fois, retourne []
     """
-    pass
+    if l.is_empty():
+        return List()
+    
+    if l.head() == e:
+        k -= 1
+        if k == 0:
+            return l
+    
+    return last_k_occurrences(l.tail(), e, k)
 
 # Exemples :
 # last_k_occurrences([1[2[3[2[4[2[]]]]]], 2, 2) → [2[4[2[]]]]
 # last_k_occurrences([1[2[3[2[4[]]]]]], 2, 3) → [2[3[2[4[]]]]]
 # last_k_occurrences([1[2[3[]]]], 5, 1) → []
+
+l = List()
+l = l.concat(2)
+l = l.concat(4)
+l = l.concat(2)
+l = l.concat(3)
+l = l.concat(2)
+l = l.concat(1)
+print(last_k_occurrences(l, 2, 2))
