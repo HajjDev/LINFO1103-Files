@@ -7,7 +7,10 @@ def remove_nth(l, n):
     post: retourne une nouvelle liste identique à `l` mais sans son `n`-ième élément (0-indexé).
           Si `n` est plus grand ou égal à la taille de `l`, retourne `l` inchangée.
     """
-    pass
+    if l.is_empty(): return List()
+    
+    if n == 0: return remove_nth(l.tail(), n - 1)
+    return remove_nth(l.tail(), n - 1).concat(l.head())
 
 # Exemples :
 # remove_nth([1[2[3[4[]]]]], 1) → [1[3[4[]]]]

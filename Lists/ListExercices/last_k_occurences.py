@@ -22,12 +22,3 @@ def last_k_occurrences(l, e, k):
 # last_k_occurrences([1[2[3[2[4[2[]]]]]], 2, 2) → [2[4[2[]]]]
 # last_k_occurrences([1[2[3[2[4[]]]]]], 2, 3) → [2[3[2[4[]]]]]
 # last_k_occurrences([1[2[3[]]]], 5, 1) → []
-
-l = List()
-l = l.concat(2)
-l = l.concat(4)
-l = l.concat(2)
-l = l.concat(3)
-l = l.concat(2)
-l = l.concat(1)
-print(last_k_occurrences(l, 2, 2))

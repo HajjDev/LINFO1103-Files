@@ -13,9 +13,3 @@ def sum_list(l):
 # Exemples :
 # sum_list([1[2[3[]]]]) → 6
 # sum_list([]) → 0
-
-l = List()
-l = l.concat(1)
-l = l.concat(2)
-l = l.concat(3)
-print(sum_list(l))

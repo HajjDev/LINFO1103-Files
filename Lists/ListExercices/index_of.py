@@ -7,7 +7,13 @@ def index_of(l, e):
     post: retourne l’indice (0-indexé) de la première occurrence de `e` dans `l`.
           Si `e` n’est pas présent, retourne -1.
     """
-    pass
+    def rec(l, e, occs):
+        if l.is_empty(): return -1
+
+        if l.head() == e: return occs
+        return rec(l.tail(), e, occs + 1)
+
+    return rec(l, e, 0)
 
 # Exemples :
 # index_of([4[3[2[1[]]]]], 2) → 2

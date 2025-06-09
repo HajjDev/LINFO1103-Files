@@ -6,7 +6,10 @@ def count_if(l, predicate):
     pre: `predicate` est une fonction booléenne
     post: retourne le nombre d’éléments de `l` qui satisfont `predicate`
     """
-    pass
+    if l.is_empty(): return 0
+    if predicate(l.head()): return 1 + count_if(l.tail(), predicate)
+    
+    return 0 + count_if(l.tail(), predicate)
 
 # Exemples :
 # count_if([1[2[3[4[]]]]], lambda x: x % 2 == 0) → 2

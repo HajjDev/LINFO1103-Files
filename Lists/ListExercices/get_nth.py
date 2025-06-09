@@ -6,7 +6,10 @@ def get_nth(l, n):
     pre: `n` >= 0
     post: retourne le n-ième élément de la liste (0 pour le premier)
     """
-    pass
+    if l.is_empty(): raise IndexError
+    
+    if n == 0: return l.head()
+    return get_nth(l.tail(), n - 1)
 
 # Exemples :
 # get_nth([1[2[3[]]]], 0) → 1

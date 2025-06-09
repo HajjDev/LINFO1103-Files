@@ -8,7 +8,10 @@ def replace_nth(l, n, e):
     post: retourne une nouvelle liste identique à `l` sauf que le `n`-ième élément est remplacé par `e`.
           Si `n` dépasse la longueur de `l`, retourne `l` inchangée.
     """
-    pass
+    if l.is_empty(): return List()
+    
+    if n == 0: return replace_nth(l.tail(), n - 1, e).concat(e)
+    return replace_nth(l.tail(), n - 1, e).concat(l.head())
 
 # Exemples :
 # replace_nth([1[2[3[]]]], 1, 9) → [1[9[3[]]]]

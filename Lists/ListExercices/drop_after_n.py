@@ -7,7 +7,11 @@ def drop_after_n(l, n):
     post: retourne une nouvelle liste contenant les `n` premiers éléments de `l`.
           Si `l` a moins de `n` éléments, retourne une copie de `l`.
     """
-    pass
+    if l.is_empty(): return List()
+    
+    if n == 1: return List(l.head())
+    
+    return drop_after_n(l.tail(), n - 1).concat(l.head()) 
 
 # Exemples :
 # drop_after_n([1[2[3[4[]]]]], 2) → [1[2[]]]
