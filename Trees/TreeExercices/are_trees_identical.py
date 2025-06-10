@@ -8,24 +8,26 @@ def are_trees_identical(tree1: BinaryTree, tree2: BinaryTree) -> bool:
           - mêmes valeurs dans les mêmes positions
           retourne False sinon
     """
+    if tree1.is_empty() and tree2.is_empty(): return True
+    elif tree1.is_empty() or tree2.is_empty(): return False
+    
+    if tree1.get_elem() == tree2.get_elem():
+        return are_trees_identical(tree1.left(), tree2.left()) and are_trees_identical(tree1.right(), tree2.right())
+    
+    return False
 
-# Exemples d'utilisation de la fonction are_trees_identical :
 
-# arbre1 = BinaryTree(1)
-# arbre1.left().elem = 2
-# arbre1.right().elem = 3
+arbre1 = BinaryTree(1)
+arbre1.left_tree = BinaryTree(2)
+arbre1.right_tree = BinaryTree(3)
 
-# arbre2 = BinaryTree(1)
-# arbre2.left().elem = 2
-# arbre2.right().elem = 3
+arbre2 = BinaryTree(1)
+arbre2.left_tree = BinaryTree(2)
+arbre2.right_tree = BinaryTree(3)
 
-# are_trees_identical(arbre1, arbre2) → True
+arbre3 = BinaryTree(1)
+arbre3.left_tree = BinaryTree(3)  # Différent de arbre1 et arbre2
+arbre3.right_tree = BinaryTree(2)
 
-# arbre3 = BinaryTree(1)
-# arbre3.left().elem = 2
-
-# are_trees_identical(arbre1, arbre3) → False
-
-# arbre_vide1 = BinaryTree()
-# arbre_vide2 = BinaryTree()
-# are_trees_identical(arbre_vide1, arbre_vide2) → True
+print(are_trees_identical(arbre1, arbre2))  # True
+print(are_trees_identical(arbre1, arbre3))  # False
