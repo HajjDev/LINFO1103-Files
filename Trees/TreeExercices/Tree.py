@@ -46,3 +46,30 @@ class BinaryTree:
         if self.is_empty():
             raise RuntimeError('Cannot get the right subtree of an empty tree')
         return self.right_tree
+    
+    def setelem(self, elem):
+        """
+        pre: elem is not None
+        post: the root element of the current BinaryTree is set to elem
+        """
+        if elem is None:
+            raise RuntimeError('setelem requires "elem" to be different from None')
+        self.root_elem = elem
+        
+    def setright(self, tree):
+        """
+        pre: -
+        post: the right subtree of the current BinaryTree is set to "tree"
+        """
+        if not isinstance(tree, BinaryTree):
+            raise RuntimeError('setright requires "tree" to be a BinaryTree')
+        self.right_tree = tree
+    
+    def setleft(self, tree):
+        """
+        pre: -
+        post: the left subtree of the current BinaryTree is set to "tree"
+        """
+        if not isinstance(tree, BinaryTree):
+            raise RuntimeError('setleft requires "tree" to be a BinaryTree')
+        self.left_tree = tree
