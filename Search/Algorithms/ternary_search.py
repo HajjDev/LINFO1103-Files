@@ -2,9 +2,8 @@
 def ternary_search(array, key, low, high):
     if low > high: return -1
     
-    third = (high - low) // 3
-    first_cut = low + third
-    second_cut = high - third
+    first_cut = low + ((high - low) // 3)
+    second_cut = low + 2 * ((high - low) // 3)
     if array[first_cut] == key: return first_cut
     if array[second_cut] == key: return second_cut
     

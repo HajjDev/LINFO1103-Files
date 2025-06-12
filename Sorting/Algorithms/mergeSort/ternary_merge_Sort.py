@@ -31,7 +31,6 @@ def merge(array, low, cut1, cut2, high):
                 array[k] = placement[j]
                 j += 1
         else:
-            # All three indices are in bounds
             if placement[i] <= placement[j] and placement[i] <= placement[h]:
                 array[k] = placement[i]
                 i += 1
@@ -58,4 +57,4 @@ def merge_sort(array, low, high):
     merge(array, low, cut1, cut2, high)
     return array
 
-print(merge_sort([2, 2, 1, 4], 0, 3))
+print(merge_sort([2, 2, 1, 4], 0, 3))                           
